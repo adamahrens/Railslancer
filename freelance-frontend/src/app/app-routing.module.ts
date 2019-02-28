@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { DocumentsComponent } from './documents/documents.component';
 
 const routes: Routes = [
+  { path: '', pathMatch: 'full', redirectTo: '/documents' },
   { path: 'documents', component: DocumentsComponent }
 ];
 
