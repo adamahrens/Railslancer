@@ -6,3 +6,23 @@
     </p>
   </div>
 </div>
+<div class="row d-flex">
+  <div *ngFor="let proposal of proposals" class="col-lg-6">
+    <div class="card bg-light mb-3">
+      <div class="card-body">
+        <h5 class="card-title">{{ proposal.customer }}</h5>
+        <p class="card-text"> {{ proposal.tools }}</p>
+      </div>
+      <div class="card-body">
+        <p class="card-text"> Expected to work for{{ proposal.estimated_hours }} at a rate of {{ proposal.weeks_to_complete }}</p>
+        <a href="{{ proposal.portfolio_url }}" class="card-link">Portfolio</a>
+      </div>
+      <div class="card-body">
+        <a href="mailto:{{ proposal.client_email }}" class="card-link">Email {{ proposal.customer }}</a>
+      </div>
+      <div class="card-footer text-muted">
+        Weeks to complete {{ proposal.weeks_to_complete }}
+     </div>
+    </div>
+  </div>
+</div>
