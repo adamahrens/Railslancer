@@ -1,0 +1,76 @@
+<div class="row text-center">
+  <div class="col">
+    <h5>New Proposal</h5>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <div class="new-proposal">
+      <form #proposalForm="ngForm" name="proposalForm">
+        <div class="form-group">
+          <label for="customer">Customer Name</label>
+          <input #customer='ngModel' [(ngModel)]="proposal.customer" type="text" id="customer" name="customer" required placeholder="Company Name" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="portfolio_url">Portfolio URL</label>
+          <input #customer='ngModel' [(ngModel)]="proposal.portfolio_url" type="text" id="portfolio_url" name="portfolio_url" required placeholder="Company Name" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="tools">Tools</label>
+          <input #customer='ngModel' [(ngModel)]="proposal.tools" type="text" id="tools" name="tools" required placeholder="Ruby on Rails, Swift, Angular" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="client_email">Email</label>
+          <input #customer='ngModel' [(ngModel)]="proposal.client_email" type="text" id="client_email" name="client_email" required placeholder="Email" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="estimated_hours">Estimated Hours</label>
+          <input #customer='ngModel' [(ngModel)]="proposal.estimated_hours" type="number" id="estimated_hours" name="estimated_hours" required class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="hourly_rate">Hourly Rate</label>
+          <input #customer='ngModel' [(ngModel)]="proposal.hourly_rate" type="number" id="hourly_rate" name="hourly_rate" required class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="weeks_to_complete">Complete In Weeks</label>
+          <input #customer='ngModel' [(ngModel)]="proposal.weeks_to_complete" type="number" id="weeks_to_complete" name="weeks_to_complete" required class="form-control">
+        </div>
+        <div class="form-group">
+          <button type="submit" [disabled]="proposalForm.form.invalid">Save</button>
+        </div>
+        <div>
+          <p>
+            Form Status: {{ proposalForm.status }}
+          </p>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <div>
+      <p>
+        Greetings <strong>{{ proposal.customer }}</strong>,
+      </p>
+      <p>
+        In order to make your application a success we will utilize <strong>{{ proposal.tools }}</strong> and follow industry best practices
+      </p>
+      <p>
+        We predict this will take roughly <strong>{{ proposal.weeks_to_complete }}</strong> weeks to complete with around <strong>{{ proposal.estimated_hours }}</strong> hours. My hourly rate is <strong>{{ proposal.hourly_rate }}</strong>
+      </p>
+      <p>
+        This will end up costing you <strong>${{ proposal.hourly_rate * proposal.estimated_hours }}</strong>
+      </p>
+      <p>
+        More details on the proposal can be found at <strong><a href="{{ proposal.portfolio_url }}">Here</a></strong>
+      </p>
+      <p>
+        Feel free to reach out to me at <strong>{{ proposal.client_email }}</strong>
+      </p>
+      <p>
+        Sincerely, Adam
+      </p>
+    </div>
+  </div>
+</div>
