@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col">
+    <div>
+      <p>
+        Greetings <strong>{{ proposal.customer }}</strong>,
+      </p>
+      <p>
+        In order to make your application a success we will utilize <strong>{{ proposal.tools }}</strong> and follow industry best practices
+      </p>
+      <p>
+        We predict this will take roughly <strong>{{ proposal.weeks_to_complete }}</strong> weeks to complete with around <strong>{{ proposal.estimated_hours }}</strong> hours. My hourly rate is <strong>{{ proposal.hourly_rate }}</strong>
+      </p>
+      <p>
+        This will end up costing you <strong>${{ proposal.hourly_rate * proposal.estimated_hours }}</strong>
+      </p>
+      <p>
+        More details on the proposal can be found at <strong><a href="{{ proposal.portfolio_url }}">Here</a></strong>
+      </p>
+      <p>
+        Feel free to reach out to me at <strong>{{ proposal.client_email }}</strong>
+      </p>
+      <p>
+        Sincerely, Adam
+      </p>
+    </div>
+  </div>
+</div>

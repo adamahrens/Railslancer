@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { DocumentsComponent } from './documents/documents.component';
 import { ProposalsComponent } from './proposals/proposals.component';
 import { ProposalNewComponent } from './proposals/proposal-new.component';
+import { ProposalShowComponent } from './proposals/proposal-show.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DocumentsComponent,
     ProposalsComponent,
-    ProposalNewComponent
+    ProposalNewComponent,
+    ProposalShowComponent
   ],
   imports: [
     BrowserModule,

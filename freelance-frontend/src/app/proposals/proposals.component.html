@@ -23,6 +23,9 @@
       <div class="card-body">
         <a href="mailto:{{ proposal.client_email }}" class="card-link">Email {{ proposal.customer }}</a>
       </div>
+      <div class="card-body">
+        <a href="/proposal/{{ proposal.id }}" class="btn btn-primary">Show</a>
+      </div>
       <div class="card-footer text-muted">
         Weeks to complete {{ proposal.weeks_to_complete }}
       </div>
