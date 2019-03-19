@@ -36,7 +36,7 @@
           <input #customer='ngModel' [(ngModel)]="proposal.weeks_to_complete" type="number" id="weeks_to_complete" name="weeks_to_complete" required class="form-control">
         </div>
         <div class="form-group">
-          <button type="submit" [disabled]="proposalForm.form.invalid">Save</button>
+          <button type="submit" [disabled]="proposalForm.form.invalid" class="btn btn-large btn-primary">Save</button>
         </div>
         <div>
           <p>
