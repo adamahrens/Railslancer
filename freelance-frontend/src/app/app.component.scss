@@ -11,6 +11,10 @@ nav {
   }
 }
 
+.navbar-dark .navbar-nav .nav-link.active {
+  color: #E64758;
+}
+
 .root {
   background-color: #343A40;
   color: white;
