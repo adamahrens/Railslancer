@@ -14,10 +14,10 @@ export class ProposalsComponent implements OnInit {
 
   ngOnInit() {
     this.proposals = [
-      new Proposal(1, 'When I Work', 'http://www.wheniwork.com', 'PHP React Go Swift', 40, 41, 36, 'support@wheniwork.com'),
-      new Proposal(2, 'Appsbyahrens', 'http://www.appsbyahrens.com', 'Swift Objective-C Ruby on Rails', 40, 41, 36, 'support@appsbyahrens.com'),
-      new Proposal(3, 'SmartThings', 'http://www.smartthings.com', 'Swift Objective-C Kotlin', 40, 41, 36, 'support@smartthings.com'),
-      new Proposal(4, 'Thomson Reuters', 'http://www.thomsonreuters.com', 'C# Selenium', 40, 41, 36, 'support@reuters.com')
+      new Proposal(1, 'When I Work', 'http://www.wheniwork.com', 'PHP React Go Swift', 40, 57, 36, 'support@wheniwork.com'),
+      new Proposal(2, 'Appsbyahrens', 'http://www.appsbyahrens.com', 'Swift Objective-C Ruby on Rails', 40, 32, 36, 'support@appsbyahrens.com'),
+      new Proposal(3, 'SmartThings', 'http://www.smartthings.com', 'Swift Objective-C Kotlin', 40, 75, 36, 'support@smartthings.com'),
+      new Proposal(4, 'Thomson Reuters', 'http://www.thomsonreuters.com', 'C# Selenium', 40, 88, 36, 'support@reuters.com')
     ]
   }
 

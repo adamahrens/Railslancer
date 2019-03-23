@@ -4,9 +4,6 @@
     <p>
       This is where proposals will eventually show up from a Rails app
     </p>
-    <div>
-      <a class="nav-item nav-link" routerLink="/proposals/new" routerLinkActive="active">New Proposal</a>
-    </div>
   </div>
 </div>
 <div class="row d-flex">
@@ -14,13 +11,10 @@
     <div class="card bg-light mb-3">
       <div class="card-body">
         <h5 class="card-title">{{ proposal.customer }}</h5>
-        <p class="card-text"> {{ proposal.tools }}</p>
-      </div>
-      <div class="card-body">
-        <p class="card-text"> Expected to work for{{ proposal.estimated_hours }} at a rate of {{ proposal.weeks_to_complete }}</p>
+        <p class="card-text">{{ proposal.tools }}</p>
+        <p class="card-text">Expected to work for{{ proposal.estimated_hours }} with weeks to complete of {{ proposal.weeks_to_complete }}</p>
+        <p class="card-text">Cost is {{ proposal.estimated_hours * proposal.hourly_rate | currency:"$" }}</p>
         <a href="{{ proposal.portfolio_url }}" class="card-link">Portfolio</a>
-      </div>
-      <div class="card-body">
         <a href="mailto:{{ proposal.client_email }}" class="card-link">Email {{ proposal.customer }}</a>
       </div>
       <div class="card-body">
