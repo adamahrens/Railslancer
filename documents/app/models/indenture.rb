@@ -1,0 +1,2 @@
+class Indenture < ApplicationRecord
+end
