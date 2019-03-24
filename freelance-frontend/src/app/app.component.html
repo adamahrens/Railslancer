@@ -8,6 +8,9 @@
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
+        <a class="nav-item nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-item nav-link" routerLink="/documents" routerLinkActive="active">Documents</a>
       </li>
       <li class="nav-item">
@@ -21,12 +24,5 @@
 </nav>
 
 <div class="container mt-4 root">
-  <div class="row text-center">
-    <div class="col">
-      <h1>
-        Welcome to {{ title }}!
-      </h1>
-    </div>
-  </div>
   <router-outlet></router-outlet>
 </div>
