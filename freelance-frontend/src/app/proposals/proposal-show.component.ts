@@ -18,7 +18,7 @@ export class ProposalShowComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.proposal = new Proposal();
+    this.proposal = new Proposal(2, 'Appsbyahrens', 'http://www.appsbyahrens.com', 'Swift Objective-C Ruby on Rails', 40, 32, 36, 'support@appsbyahrens.com');
     this.routeId = this.route.params.subscribe(params => {
       this.id = +params['id'];
       console.log('Got this id = ' + this.id);
