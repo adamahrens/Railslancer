@@ -24,3 +24,6 @@ Things you may want to cover:
 * ...
 
 `rails db:setup`
+
+# Add caching in development
+`rails dev:cache`

@@ -4,13 +4,12 @@ class IndenturesController < ApplicationController
   # GET /indentures
   def index
     @indentures = Indenture.all
-
-    render json: @indentures
+    render json: @indentures if stale? @indentures
   end
 
   # GET /indentures/1
   def show
-    render json: @indenture
+    render json: @indenture if stale? @indenture
   end
 
   # POST /indentures
