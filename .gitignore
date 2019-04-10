@@ -95,3 +95,4 @@ testem.log
 Thumbs.db
 *.keep
 !.keep
+/proposals/config/master.key
