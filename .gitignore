@@ -100,3 +100,5 @@ Thumbs.db
 /proposals/tmp/cache
 /proposals/log/development.log
 /proposals/db/development.sqlite3
+/proposals/tmp/restart.txt
+/proposals/tmp/pids
