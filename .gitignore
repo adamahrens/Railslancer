@@ -96,3 +96,7 @@ Thumbs.db
 *.keep
 !.keep
 /proposals/config/master.key
+/proposals/tmp/development_secret.txt
+/proposals/tmp/cache
+/proposals/log/development.log
+/proposals/db/development.sqlite3
