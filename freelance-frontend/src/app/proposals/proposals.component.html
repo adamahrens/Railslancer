@@ -12,7 +12,7 @@
       <div class="card-body">
         <h5 class="card-title">{{ proposal.customer }}</h5>
         <p class="card-text">{{ proposal.tools }}</p>
-        <p class="card-text">Expected to work for{{ proposal.estimated_hours }} with weeks to complete of {{ proposal.weeks_to_complete }}</p>
+        <p class="card-text">Expected to work for {{ proposal.estimated_hours }} with weeks to complete of {{ proposal.weeks_to_complete }}</p>
         <p class="card-text">Cost is {{ proposal.estimated_hours * proposal.hourly_rate | currency:"$" }}</p>
         <a href="{{ proposal.portfolio_url }}" class="card-link">Portfolio</a>
         <a href="mailto:{{ proposal.client_email }}" class="card-link">Email {{ proposal.customer }}</a>
