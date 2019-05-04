@@ -1,7 +1,7 @@
 <div class="row mt-3">
   <div class="col">
     <div class="new-proposal">
-      <form #proposalForm="ngForm" name="proposalForm">
+      <form (ngSubmit)="createProposal(proposal)" #proposalForm="ngForm" name="proposalForm">
         <div class="form-group">
           <label for="customer">Customer Name</label>
           <input #customer='ngModel' [(ngModel)]="proposal.customer" type="text" id="customer" name="customer" required placeholder="Company Name" class="form-control">
@@ -36,7 +36,7 @@
           <input #customer='ngModel' [(ngModel)]="proposal.weeks_to_complete" type="number" id="weeks_to_complete" name="weeks_to_complete" required class="form-control">
         </div>
         <div class="form-group">
-          <button type="submit" [disabled]="proposalForm.form.invalid" class="btn btn-large btn-primary">Save</button>
+          <button type="submit" [hidden]="submitted" [disabled]="proposalForm.form.invalid" class="btn btn-large btn-primary">Save</button>
         </div>
         <div>
           <p>
