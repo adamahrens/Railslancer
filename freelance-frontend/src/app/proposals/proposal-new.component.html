@@ -38,6 +38,9 @@
         <div class="form-group">
           <button type="submit" [hidden]="submitted" [disabled]="proposalForm.form.invalid" class="btn btn-large btn-primary">Save</button>
         </div>
+        <div [hidden]="!submitted" class="alert alert-success" role="alert">
+          Your proposal has been successfully created. <a routerLink="/proposals" class="alert-link">View All Proposals</a>
+        </div>
         <div>
           <p>
             Form Status: {{ proposalForm.status }}

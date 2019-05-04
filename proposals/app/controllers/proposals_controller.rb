@@ -3,7 +3,7 @@ class ProposalsController < ApplicationController
 
   # GET /proposals
   def index
-    @proposals = Proposal.all
+    @proposals = Proposal.all.order(created_at: :desc)
 
     render json: @proposals if stale? @proposals
   end
@@ -19,6 +19,9 @@ class ProposalsController < ApplicationController
 
     if @proposal.save
       render json: @proposal, status: :created, location: @proposal
+
+      # Send an email
+      ProposalMailer.generate_proposal_email(@proposal).deliver_later
     else
       render json: @proposal.errors, status: :unprocessable_entity
     end
